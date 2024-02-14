@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May  8 21:01:15 2022
-
-@author: siddhardhan
-"""
 
 import pickle
 import streamlit as st
@@ -242,7 +236,40 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+if (selected == 'breast cancer prediction'):
+    st.title('Breast Cancer Prediction using ML')
+    col1, col2, col3 = st.columns(3)
+   
+    with col1:
+        radius_mean = st.text_input('Radius Mean', key='radius_mean_input')
+        perimeter_mean = st.text_input('Perimeter Mean', key='perimeter_mean_input')
+        compactness_mean = st.text_input('Compactness Mean', key='compactness_mean_input')
+        concavity_mean = st.text_input('Concavity Mean', key='concavity_mean_input')
+        concave_points_mean = st.text_input('Concave Points Mean', key='concave_points_mean_input')
+    with col2:
+        texture_mean = st.text_input('Texture Mean', key='texture_mean_input')
+        area_mean = st.text_input('Area Mean', key='area_mean_input')
+        smoothness_mean = st.text_input('Smoothness Mean', key='smoothness_mean_input')
+        symmetry_mean = st.text_input('Symmetry Mean', key='symmetry_mean_input')
+        fractal_dimension_mean = st.text_input('Fractal Dimension Mean', key='fractal_dimension_mean_input')
+    with col3:
+        radius_se = st.text_input('Radius SE', key='radius_se_input')
+        perimeter_se = st.text_input('Perimeter SE', key='perimeter_se_input')
+        compactness_se = st.text_input('Compactness SE', key='compactness_se_input')
+        concavity_se = st.text_input('Concavity SE', key='concavity_se_input')
+        concave_points_se = st.text_input('Concave Points SE', key='concave_points_se_input')
+    
+    breast_cancer_diagnosis = ''
 
+    if st.button('Breast Cancer Test Result'):
+        breast_cancer_diagnosis = breast_cancer_prediction.predict([[radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean, radius_se, perimeter_se, compactness_se, concavity_se, concave_points_se]])
+        
+        if breast_cancer_diagnosis[0] == 1:
+            breast_cancer_diagnosis = 'the person has Breast Cancer'
+        else:
+            breast_cancer_diagnosis = 'the person does not have Breast Cancer'
+
+    st.success(breast_cancer_diagnosis)
 
 
 
