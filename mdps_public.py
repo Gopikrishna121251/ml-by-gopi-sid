@@ -12,7 +12,7 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-
+breast_cancer_prediction = pickle.load(open('breast_cancer_data.sav','rb'))
 
 # sidebar for navigation
 with st.sidebar:
@@ -22,7 +22,7 @@ with st.sidebar:
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['activity','heart','person'],
+                          icons=['activity','heart','person','amd'],
                           default_index=0)
     
     
