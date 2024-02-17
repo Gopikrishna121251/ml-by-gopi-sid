@@ -29,7 +29,12 @@ with st.sidebar:
     
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
- page_bg_img = '''
+
+
+st.markdown(page_bg_img, unsafe_allow_html=True)   
+    # page title
+    st.title('Diabetes Prediction using ML')
+     page_bg_img = '''
 <style>
 body {
 background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
@@ -38,10 +43,7 @@ background-size: cover;
 </style>
 '''
 
-st.markdown(page_bg_img, unsafe_allow_html=True)   
-    # page title
-    st.title('Diabetes Prediction using ML')
-    
+st.markdown(page_bg_img, unsafe_allow_html=True)
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
