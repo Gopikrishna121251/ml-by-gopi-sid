@@ -34,9 +34,12 @@ if (selected == 'Diabetes Prediction'):
 st.markdown(page_bg_img, unsafe_allow_html=True)   
     # page title
     st.title('Diabetes Prediction using ML')
-     page_bg_img = '''
-       <style>
-            body {
+      if condition:
+    # indented block of code
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+            page_bg_img = '''
+               <style>
+                body {
                 background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
                 background-size: cover;
                 }
