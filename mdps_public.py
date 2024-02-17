@@ -72,7 +72,7 @@ if (selected == 'Diabetes Prediction'):
         
         if (diab_prediction[0] == 1):
           diab_diagnosis = 'The person is diabetic'
-          #st.markdown("![Alt Text](https://giphy.com/gifs/reaction-what-despicable-me-SqmkZ5IdwzTP2)" ,unsafe_allow_html=True)
+          st.markdown("![Alt Text](<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/IsDjNQPc4weWPEwhWm/video" width="480"></iframe></div>)")
             
         else:
           diab_diagnosis = 'The person is not diabetic'
