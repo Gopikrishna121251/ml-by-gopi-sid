@@ -72,7 +72,8 @@ if (selected == 'Diabetes Prediction'):
         
         if (diab_prediction[0] == 1):
           diab_diagnosis = 'The person is diabetic'
-          st.markdown("![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)")
+          st.markdown("![Alt Text](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fview%2Fdiabetes-meme-intensify-old-man-gif-9117687&psig=AOvVaw0C5FYCZHFszm0ntYlpkMLu&ust=1708228131814000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKiTquq7sYQDFQAAAAAdAAAAABAJ)")
+            
         else:
           diab_diagnosis = 'The person is not diabetic'
         
